@@ -5,6 +5,6 @@ public class DaoImpl implements IDao {
     public double getData() {
         System.out.println("Version base de donnees");
         double t = 34;
-        return 0;
+        return t;
     }
 }
