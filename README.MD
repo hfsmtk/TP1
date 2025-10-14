@@ -61,3 +61,32 @@ Le calcul est exécuté par MetierImpl sans qu’il connaisse la source des donn
 ![img_9.png](img_9.png)
 
 Alors cette application est maintenant ouverte à l’extension mais fermée à la modification.
+
+
+c. Injection de dépendances avec Spring Framework
+Version XML (PresSpringXML):
+
+![img_11.png](img_11.png)
+
+config.xml :
+
+![img_12.png](img_12.png)
+Spring crée les objets et gère leurs dépendances automatiquement.
+
+
+Version Annotations (PresSpringAnnotation)
+
+![img_13.png](img_13.png)
+
+Dans ce cas, les classes MetierImpl ,DaoImpl et DaoImplV2 doivent être annotées avec @Component et l’injection se fait via @Autowired.
+
+
+**Ce projet applique le principe de couplage faible :**
+
+L’application est fermée à la modification mais ouverte à l’extension.
+
+Le code de MetierImpl ne change pas lorsque l’on ajoute un nouveau DaoImpl.
+
+On peut simplement ajouter de nouvelles classes DAO et modifier la configuration pour les utiliser.
+
+Cela rend l’application extensible, maintenable et réutilisable.
